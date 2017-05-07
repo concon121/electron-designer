@@ -31,7 +31,7 @@
 		"isLabel": true,
 		"id": "5",
 		"labelText": "Select All",
-		"hintText": "If you click the check button in the toolbar at the top of the page then all controns currently on the page will be selected.  Click it again and everything will be de-selected.",
+		"hintText": "If you click the check button in the action toolbar at the top of the page then all controls currently on the page will be selected.  Click it again and everything will be de-selected.",
 		"isVisible": true
 	}, {
 		"isExternalLink": true,
