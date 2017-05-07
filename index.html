@@ -1,19 +1,116 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
+<html lang="en">
+
+<head>
+  <title>Product Catalogue Designer</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="stylesheets/photon/css/photon.min.css" type="text/css">
+  <link rel="stylesheet" href="stylesheets/bootstrap/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="node_modules/bootstrap-overlay/overlay-bootstrap.css">
+  <link rel="stylesheet" href="stylesheets/custom.css" type="text/css">
+
+  <!-- Scripts -->
+  <script src="views/compiled_views.js"></script>
+
+</head>
+
+<body>
+  <div class="window">
+
+    <header class="toolbar toolbar-header">
+      <div class="toolbar-actions">
+        <div class="btn-group">
+          <button class="btn btn-default" id="edit-control">
+            <span class="icon icon-pencil"></span>
+          </button>
+          <button class="btn btn-default" id="delete-control">
+            <span class="icon icon-trash"></span>
+          </button>
+          <button class="btn btn-default" id="select-all">
+            <span class="icon icon-check"></span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Your app's content goes inside .window-content -->
+    <div class="window-content">
+      <div class="pane-group">
+        <div class="pane pane-sm sidebar">
+          <nav class="nav-group">
+            <h5 class="nav-group-title">Questions</h5>
+            <span class="nav-group-item add-control" data-json="json/check_control.json">
+                <span class="icon  icon-check"></span> Check Box
+            </span>
+            <span class="nav-group-item add-control" data-json="json/date_control.json">
+                <span class="icon  icon-back-in-time"></span> Date
+            </span>
+            <span class="nav-group-item add-control" data-json="json/radio_control.json">
+                <span class="icon  icon-check"></span> Radio
+            </span>
+            <span class="nav-group-item add-control" data-json="json/select_control.json">
+                <span class="icon  icon-check"></span> Select
+            </span>
+            <span class="nav-group-item add-control" data-json="json/text_control.json">
+                <span class="icon  icon-doc-text"></span> Text
+            </span>
+            <span class="nav-group-item add-control" data-json="json/text_area_control.json">
+                <span class="icon  icon-doc-text"></span> Text Area
+            </span>
+          </nav>
+          <nav class="nav-group">
+            <h5 class="nav-group-title">Information</h5>
+            <span class="nav-group-item add-control" data-json="json/label_control.json">
+                <span class="icon  icon-info-circled"></span> Label
+            </span>
+            <span class="nav-group-item add-control" data-json="json/message_control.json">
+                <span class="icon  icon-info-circled"></span> Message
+            </span>
+            <span class="nav-group-item add-control" data-json="json/review_status_control.json">
+                <span class="icon  icon-info-circled"></span> Review Status
+            </span>
+          </nav>
+          <nav class="nav-group">
+            <h5 class="nav-group-title">Links</h5>
+            <span class="nav-group-item add-control" data-json="json/external_link_control.json">
+                <span class="icon  icon-link"></span> External Link
+            </span>
+            <span class="nav-group-item add-control" data-json="json/internal_link_control.json">
+                <span class="icon  icon-link"></span> Internal Link
+            </span>
+          </nav>
+        </div>
+
+        <div class="pane container">
+          <div class="panel-body" id="base_panel">
+            <div id="designer_panel">
+              <h1>Woops!</h1>
+              <p> Oh no, the content didn't render! Check the developer console to see if any errors occurred.</p>
+            </div>
+            <div id="overlay" class="panel-body panel-primary-overlay-left">
+              <h1>Edit Control</h1>
+              <div id="edit-control-inputs">
+
+              </div>
+              <button name="btnAction" type="submit" id="exitEdit" class="btn btn-default" value="exitDoNotSave">Cancel</button>
+              <button name="btnAction" type="submit" id="saveEdit" class="btn btn-secondary" value="saveExit">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script>
     // You can also require other files to run in this process
     require('./renderer.js')
   </script>
+</body>
+
 </html>

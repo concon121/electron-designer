@@ -1,0 +1,6 @@
+{
+	"isMessage": true,
+	"id": "label-id",
+	"labelText": "This is a message control! You can use messages to display small pieces of information.",
+	"isVisible": true
+}

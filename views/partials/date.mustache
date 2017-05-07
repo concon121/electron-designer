@@ -1,0 +1,55 @@
+<!-- date.mustache begins -->
+<div tabindex="-1" id="js-form-group-{{ id }}" class="col-sm-8 form-group {{#isRequired}}required{{/isRequired}} {{# isErrorVisible }}has-error{{/ isErrorVisible}}" {{^isVisible}}style="display:none;"{{/isVisible}}>
+
+    <fieldset>
+        <legend id="label__textarea-{{id}}" class="label-text" for="form-date-{{id}}">{{ labelText }}</legend>
+        {{^isRequired}}<span class="is-required-text">(Optional)</span>{{/isRequired}}
+
+        <span class="error-wrapper {{^isErrorVisible}} hidden{{/isErrorVisible}}">
+            <span class="error-message">{{validationMessage}}</span>
+        </span>
+
+
+        <div class="form-horizontal row form-date" id="form-date-{{id}}">
+
+            {{#hintText}}
+                <div class="col-sm-12">
+                    <p class="form-hint">{{hintText}}</p>
+                </div>
+            {{/hintText}}
+
+            <div class="col-sm-3 form-group-day {{#validationDay.isRequired }} required {{/ validationDay.isRequired }}">
+
+                <label id="label__date-day-{{id}}" class="label-text sr-only" for="input__date-day-{{id}}">Day</label>
+
+                <input value="{{dateValue.day}}" size="2" maxlength="2" js-data-type="date" class="form-control" id="input__date-day-{{id}}" name="{{# name}}{{ name }}-day{{/name}}{{^name}}input__date-day-{{id}}{{/name}}" placeholder="" {{#validationDay}} js-data-validation-rules="{{ regEx }}" js-data-min-val="{{ minValue }}" js-data-max-val="{{ maxValue }}" js-data-min-len="{{ minLength }}"  js-data-max-len="{{ maxLength }}"{{/ validationDay}}>
+                <p class="help-block">Day</p>
+            </div>
+
+            <div class="col-sm-3 form-group-month {{#validationMonth.isRequired }} required {{/ validationMonth.isRequired }}">
+
+                <label id="label__date-month-{{id}}" class="label-text sr-only" for="input__date-month-{{id}}">Month</label>
+
+                <input value="{{dateValue.month}}" size="2" maxlength="2" js-data-type="date" class="form-control" id="input__date-month-{{id}}" name="{{# name}}{{ name }}-month{{/name}}{{^name}}input__date-month-{{id}}{{/name}}" placeholder="" {{#validationMonth}} js-data-validation-rules="{{ regEx }}" js-data-min-val="{{ minValue }}" js-data-max-val="{{ maxValue }}" js-data-min-len="{{ minLength }}"  js-data-max-len="{{ maxLength }}"{{/ validationMonth}}>
+                <p class="help-block">Month</p>
+            </div>
+
+            <div class="col-sm-6 form-group-year {{#validationYear.isRequired }} required {{/ validationYear.isRequired }}">
+
+                <label id="label__date-year-{{id}}" class="label-text sr-only" for="input__date-year-{{id}}">Year</label>
+
+                <input value="{{dateValue.year}}" size="4" maxlength="4" js-data-type="date" class="form-control" id="input__date-year-{{id}}" name="{{# name}}{{ name }}-year{{/name}}{{^name}}input__date-year-{{id}}{{/name}}" placeholder="" {{#validationYear}} js-data-validation-rules="{{ regEx }}" js-data-min-val="{{ minValue }}" js-data-max-val="{{ maxValue }}" js-data-min-len="{{ minLength }}"  js-data-max-len="{{ maxLength }}"{{/ validationYear}}>
+                <p class="help-block">Year</p>
+            </div>
+
+            {{# hasTodaysDateButton }}
+                <div class="form-group">
+                    <button class="btn btn-default fill-date" id="{{id}}" aria-label="Press this button to automatically enter today's date into the current date field.">Today</button>
+                </div>
+            {{/ hasTodaysDateButton }}
+        </div>
+    </fieldset>
+
+    <p class="help-block">For example: 01 12 1970</p>
+</div>
+<!-- date.mustache ends -->

@@ -1,0 +1,8 @@
+{
+	"isText": true,
+	"id": "label-id",
+	"labelText": "This is a text input!",
+	"hintText": "You can use text inputs to allow the user to input a regular string of limited length.",
+	"isVisible": true,
+	"isRequired": true
+}

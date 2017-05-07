@@ -1,0 +1,44 @@
+<!-- text.mustache begins -->
+<div  tabindex="-1" id="js-form-group-{{ id }}" class="col-sm-12 form-group {{# isOptionsInline }}inline{{/ isOptionsInline }} {{# isRequired }}required{{/ isRequired }} {{# isErrorVisible }}error{{/ isErrorVisible}}" {{^isVisible}}style="display:none;"{{/isVisible}}>
+
+    <label class="label-text" for="{{ id }}" id="label__text-{{ id }}">{{ labelText }}</label>
+    {{^isRequired}}<span class="is-required-text">(Optional)</span>{{/isRequired}}
+
+    <span class="error-message" {{^isErrorVisible}}style="display:none;"{{/isErrorVisible}}> {{validationMessage}}</span>
+
+    {{#hintText}}
+        <div class="form-hint">{{hintText}}</div>
+    {{/hintText}}
+
+    <div class="row">
+        <div class="col-sm-5">
+            <input aria-labelledby="label__text-{{ id }}" class="form-control" type="text" name="{{# name}}{{ name }}{{/name}}{{^name}}{{ id }}{{/name}}" id="{{ id }}" placeholder="{{ placeHolderText }}" value="{{ answerValue }}"
+
+            {{# validationRules }}
+
+                {{# validationRules.regEx }}
+                    js-validation-regex="{{ validationRules.regEx }}"
+                {{/ validationRules.regEx }}
+
+                {{# validationRules.minValue }}
+                    js-validation-minVal="{{ validationRules.minValue }}"
+                {{/ validationRules.minValue }}
+
+                {{# validationRules.maxValue }}
+                    js-validation-maxVal="{{ validationRules.maxValue }}"
+                {{/ validationRules.maxValue }}
+
+                {{# validationRules.minLength }}
+                    js-validation-minLen="{{ validationRules.minLength }}"
+                {{/ validationRules.minLength }}
+
+                {{# validationRules.maxLength }}
+                    js-validation-maxLen="{{ validationRules.maxLength }}"
+                {{/ validationRules.maxLength }}
+
+            {{/ validationRules }}>
+        </div>
+    </div>
+
+</div>
+<!-- text.mustache ends -->

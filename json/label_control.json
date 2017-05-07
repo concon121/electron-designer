@@ -1,0 +1,7 @@
+{
+	"isLabel": true,
+	"id": "label-id",
+	"labelText": "This is a label control!",
+	"hintText": "You can use labels to display small pieces of information.",
+	"isVisible": true
+}

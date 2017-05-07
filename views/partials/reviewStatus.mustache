@@ -1,0 +1,24 @@
+<div class="col-sm-12">
+    {{#isErrorVisible }}
+        <span class="error-message">
+            {{#validationMessage}}{{validationMessage}}{{/validationMessage}}
+        </span>
+    {{/isErrorVisible }}
+    <div id="js-form-group-{{ id }}" class="well well-general row-validation clearfix {{#isErrorVisible }} error{{/isErrorVisible }}">
+        <div class="float-wrapper left-wrapper">
+            <div class="pull-left">
+                <a href="{{ uri }}" class="task-name">{{ labelText }}</a>
+            </div>
+        </div>
+        <div class="float-wrapper right-wrapper">
+            <div class="pull-right">
+                <div class="status {{# isComplete }} complete{{/ isComplete }} {{^ isComplete }} incomplete{{/ isComplete }}">
+                    <div class="sr-only">
+                        {{# isComplete }} complete.{{/ isComplete }}
+                        {{^ isComplete }} incomplete.{{/ isComplete }}"
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

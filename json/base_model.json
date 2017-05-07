@@ -1,0 +1,43 @@
+{
+	"pageTitle": "Form Builder",
+	"headings": {
+		"heading": "Electron Designer",
+		"lastActivity": "The last activity was by user brayc on 06-05-2017 14:40pm"
+	},
+	"questions": [{
+		"isLabel": true,
+		"id": "1",
+		"labelText": "Adding Controls",
+		"hintText": "Use the toolbar on the left to add new controls onto the page.  Simply click on the control that you want to add and it will appear on the screen.",
+		"isVisible": true
+	}, {
+		"isLabel": true,
+		"id": "2",
+		"labelText": "Deleting Controls",
+		"hintText": "Click on the control you want to delete.  When the background colour has turned light grey, click the trash icon in the toolbar at the top of the page.  The selected control will disapear from the screen.",
+		"isVisible": true
+	}, {
+		"isLabel": true,
+		"id": "3",
+		"labelText": "Editing Controls",
+		"hintText": "Click on the control you want to edit.  When the background colour has turned light grey, click the pencil icon in the toolbar at the top of the page.  An overlay will appear with some input field for you to enter the new content.",
+		"isVisible": true
+	}, {
+		"isMessage": true,
+		"id": "4",
+		"labelText": "While the overlay is active, clicking the pencil icon again or the exit task button will close the overlay without saving any changes.  Clicking the save progress button will persist any changes you make and you will see them reflected on the screen.",
+		"isVisible": true
+	}, {
+		"isLabel": true,
+		"id": "5",
+		"labelText": "Select All",
+		"hintText": "If you click the check button in the toolbar at the top of the page then all controns currently on the page will be selected.  Click it again and everything will be de-selected.",
+		"isVisible": true
+	}, {
+		"isExternalLink": true,
+		"id": "label-id",
+		"labelText": "Find Electron Designer on GitHub.",
+		"url": "https://github.com/concon121/electron-designer",
+		"isVisible": true
+	}]
+}

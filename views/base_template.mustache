@@ -1,0 +1,14 @@
+<div class="row">
+  {{# headings }}
+
+    {{#heading}}
+      <h1 class="text-primary page-heading"><strong>{{heading}}</strong></h1>
+    {{/heading}}
+
+    {{#lastActivity}}
+      <p class="mb-1 secondary-text small last-activity">{{lastActivity}}</p>
+    {{/lastActivity}}
+  {{/ headings }}
+
+  <h2 class="mb-1"><strong>{{pageTitle}}</strong></h2> {{> views/partials/questions}}
+</div>

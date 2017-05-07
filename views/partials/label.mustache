@@ -1,0 +1,9 @@
+<!-- label.mustache begins -->
+<div  id="js-fieldset-{{ id }}" class="col-sm-12" {{^isVisible}}style="display:none;"{{/isVisible}}>
+	<span class="label-text">{{ labelText }}</span>
+
+	{{#hintText}}
+		<div class="form-hint">{{ hintText }}</div>
+	{{/hintText}}
+</div>
+<!-- label.mustache ends -->

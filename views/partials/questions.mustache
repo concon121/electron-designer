@@ -1,0 +1,49 @@
+<div id="questions" class="row">
+  {{#questions}}
+
+    {{# isCheckbox }}
+      {{> views/partials/checkbox }}
+    {{/ isCheckbox }}
+
+    {{# isDate }}
+      {{> views/partials/date }}
+    {{/ isDate }}
+
+    {{# isRadio }}
+      {{> views/partials/radio }}
+    {{/ isRadio }}
+
+    {{# isSelect }}
+      {{> views/partials/select }}
+    {{/ isSelect }}
+
+    {{# isText }}
+      {{> views/partials/text }}
+    {{/ isText }}
+
+    {{# isTextArea }}
+      {{> views/partials/textarea }}
+    {{/ isTextArea }}
+
+    {{# isLabel }}
+      {{> views/partials/label }}
+    {{/ isLabel }}
+
+    {{# isMessage }}
+      {{> views/partials/message }}
+    {{/ isMessage }}
+
+    {{# isInternalLink }}
+      {{> views/partials/internalLink}}
+    {{/ isInternalLink }}
+
+    {{# isExternalLink }}
+      {{> views/partials/externalLink}}
+    {{/ isExternalLink }}
+
+    {{#isReviewStatus}}
+      {{> views/partials/reviewStatus }}
+    {{/isReviewStatus}}
+
+  {{/questions}}
+</div>

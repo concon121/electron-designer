@@ -1,0 +1,31 @@
+<div tabindex="-1" id="js-form-group-{{ id }}" class="col-sm-8 form-group {{# isOptionsInline }}inline{{/ isOptionsInline }} {{# isRequired }}required{{/ isRequired }} {{# isErrorVisible }}error{{/ isErrorVisible}}" {{^isVisible}} style="display:none;"
+  {{/isVisible}}>
+
+  <fieldset>
+    <legend class="label-text">{{ labelText }}</legend>
+    {{^isRequired}}<span class="is-required-text">(Optional)</span>{{/isRequired}}
+
+    <span class="error-message" {{^isErrorVisible}} style="display:none;" {{/isErrorVisible}}>{{#validationMessage}}{{validationMessage}}{{/validationMessage}}</span>
+
+    {{#hintText}}
+      <div class="form-hint">{{hintText}}</div>
+    {{/hintText}}
+
+    {{# options }}
+      <div class="checkbox">
+        <label class="block-label {{#isSelected }}selected{{/isSelected}}" for="{{optionId}}" id="label__checkbox-{{optionId}}">
+					<input aria-labelledby="label__checkbox-{{optionId}}" type="checkbox" id="{{optionId}}" name="{{optionName}}" value="{{optionValue}}" {{#isSelected }}  checked="checked"{{/isSelected}}  {{#isReadOnly }} onclick="return false;" {{/isReadOnly}} {{# revealId }} js-data-reveals="{{ revealId }}" {{/ revealId }}>
+					<span class="option-label-text">{{optionLabelText}}</span>
+	            </label>
+      </div>
+      {{/options}}
+  </fieldset>
+
+
+  {{^options}}
+  <div class="validation-summary">
+    <p class="validation-message">No options present for this checkbox question: '{{labelText}}'.</p>
+  </div>
+  {{/options}}
+
+</div>

@@ -1,0 +1,22 @@
+<div  tabindex="-1" id="js-form-group-{{ id }}" class="col-sm-12 form-group {{# isRequired }} required {{/ isRequired }} {{# isErrorVisible }}error {{/ isErrorVisible}}"  {{^isVisible}}style="display:none;"{{/isVisible}}>
+
+    <label class="label-text" for="{{id}}" id="label__select-{{id}}">{{ labelText }}</label>
+    {{^isRequired}}<span class="is-required-text">(Optional)</span>{{/isRequired}}
+
+    <span class="error-message" {{^isErrorVisible}}style="display:none;"{{/isErrorVisible}}>{{validationMessage}}</span>
+
+    {{#hintText}}
+        <div class="form-hint">{{hintText}}</div>
+    {{/hintText}}
+    <div class="row">
+        <div class="col-sm-5">
+            <select aria-labelledby="label__select-{{id}}" name="{{# name}}{{ name }}{{/name}}{{^name}}{{ id }}{{/name}}" id="{{id}}" class="form-control">
+
+                {{#options }}
+                    <option {{# isSelected}}selected{{/ isSelected}} value="{{optionValue}}" {{#revealId}} js-data-reveals="{{revealId}}" {{/revealId}}>{{optionLabelText}}</option>
+                {{/options }}
+
+            </select>
+        </div>
+    </div>
+</div>

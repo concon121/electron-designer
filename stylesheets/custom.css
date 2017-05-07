@@ -1,0 +1,11 @@
+.editable {
+  background-color: lightgrey !important;
+}
+
+.overlayed .panel-body{
+    overflow: scroll !important;
+}
+
+.label-text {
+  font-weight: bold;
+}

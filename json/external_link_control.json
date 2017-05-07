@@ -1,0 +1,7 @@
+{
+	"isExternalLink": true,
+	"id": "label-id",
+	"labelText": "This is what an external link looks like! This link will take you to google.",
+	"url": "http://google.co.uk",
+	"isVisible": true
+}

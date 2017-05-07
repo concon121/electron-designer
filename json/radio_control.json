@@ -1,0 +1,29 @@
+{
+	"isRadio": true,
+	"isVisible": true,
+	"labelText": "This is a radio question!",
+	"hintText": "A radio question only allows a single answer.",
+	"isRequired": true,
+	"options": [{
+			"optionId": "opt1",
+			"isSelected": false,
+			"optionLabelText": "Option 1",
+			"optionName": "radio_question",
+			"optionValue": "1"
+		},
+		{
+			"optionId": "opt2",
+			"isSelected": true,
+			"optionLabelText": "Another option...",
+			"optionName": "radio_question",
+			"optionValue": "2"
+		},
+		{
+			"optionId": "opt3",
+			"isSelected": false,
+			"optionLabelText": "The last option!",
+			"optionName": "radio_question",
+			"optionValue": "3"
+		}
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"isDate": true,
+	"isVisible": true,
+	"id": "date-id",
+	"name": "date-name",
+	"isRequired": true,
+	"labelText": "This is a date question!",
+	"hintText": "Enter a day, a month, and a year.",
+	"dateValue": {
+		"day": "",
+		"month": "",
+		"year": ""
+	}
+}

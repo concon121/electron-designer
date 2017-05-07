@@ -1,3 +1,16 @@
-// This file is required by the index.html file and will
-// be executed in the renderer process for that window.
-// All of the Node.js APIs are available in this process.
+// Third party dependencies
+const $ = require('jquery');
+
+// Internal Dependencies
+const questionEvents = require('./renderer/question_events');
+// Paths to resources
+
+questionEvents.addEvent(function (question) {
+  ['#js-fieldset-' + question.id, '#js-form-group-' + question.id, '#' + question.id].forEach(function (item) {
+    $(item).click(function () {
+      $(this).toggleClass('editable');
+    });
+  });
+});
+
+require('./renderer/control_utils');
